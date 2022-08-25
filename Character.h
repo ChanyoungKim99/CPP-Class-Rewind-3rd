@@ -15,7 +15,7 @@ public:
 	}
 	void DisplayHealth();
 
-	virtual void Attack(Enemy& e1, Enemy& e2);
+	virtual void Attack(Character& e1, Character& e2);
 };
 
 class Enemy : public Character
@@ -25,7 +25,7 @@ public:
 	~Enemy()
 	{
 	}
-	void Attack(Player& p);
+	void Attack(Character& e1, Character& e2);
 };
 
 class Player : public Character
@@ -35,5 +35,5 @@ public:
 	~Player()
 	{
 	}
-	void Attack(Enemy& e);
+	void Attack(Character& e1, Character& e2);
 };
