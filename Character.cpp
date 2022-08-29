@@ -22,7 +22,7 @@ Enemy::Enemy(std::string name, int maxHP, int attack) : Character(name, maxHP, a
 
 void Enemy::Attack(Character& e1, Character& e2)
 {
-	std::cout << e1.mName << "이(가) " << e2.mName << "을(를) 공격했다!" << std::endl;
+	std::cout << "적 " << e1.mName << "이(가) " << e2.mName << "을(를) 공격했다!" << std::endl;
 	e2.mHP = e2.mHP - e1.mAttack;
 }
 
@@ -32,6 +32,6 @@ Player::Player(std::string name, int maxHP, int attack) : Character(name, maxHP,
 
 void Player::Attack(Character& e1, Character& e2)
 {
-	std::cout << e1.mName << "이(가) " << e2.mName << "을(를) 공격했다!" << std::endl;
+	std::cout << "플레이어 " << e1.mName << "이(가) " << e2.mName << "을(를) 공격했다!" << std::endl;
 	e2.mHP = e2.mHP - e1.mAttack;
 }
